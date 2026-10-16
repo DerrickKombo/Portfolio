@@ -136,6 +136,12 @@
   .cert-card { padding: 0; overflow: hidden; }
   .cert-image-slot { width: 100%; aspect-ratio: 16/9; background: var(--line); position: relative; border-bottom: 1px solid var(--line); }
   .cert-image-slot::after { content: 'Image Slot'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 12px; color: var(--ink-faint); }
+  .cert-image-slot img { width: 100%; height: 100%; object-fit: cover; display: block; position: absolute; inset: 0; z-index: 1; }
+  .cert-image-slot:has(img)::after { display: none; }
+  .project-image { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; margin-bottom: 20px; border: 1px solid var(--line); display: block; }
+  .card-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  .card-link { font-family: var(--font-mono); font-size: 13px; padding: 7px 14px; border: 1px solid var(--ink); border-radius: 99px; text-decoration: none; color: var(--ink); }
+  .card-link:hover { background: var(--ink); color: var(--paper); }
   .cert-content { padding: 24px; }
   .cert-meta { font-family: var(--font-mono); font-size: 13px; color: var(--ink-faint); margin-top: 12px; display: block; }
   
@@ -166,7 +172,7 @@
       <ul class="nav-links">
         <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#certification">Certifications</a></li>
+        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#journey">Journey</a></li>
       </ul>
     </nav>
@@ -225,6 +231,7 @@
           <span class="eyebrow">Hydrology & Flood Risk</span>
           <span class="eyebrow" style="color: var(--ink-faint);">Baringo County, KE</span>
         </div>
+        <img class="project-image" src="images/FLOOD-SAFE.png" alt="FLOOD-SAFE flood susceptibility framework" loading="lazy">
         <h3>RF-FS Spatial Flood Risk Framework</h3>
         <ul>
           <li>Achieved 89.7% classification accuracy and a 0.972 AUC by engineering a Random Forest flood susceptibility model that narrowed 18 candidate variables to 6 Key Driver Factors via Shadow Variable Search and Recursive Feature Elimination.</li>
@@ -272,7 +279,7 @@
     <div class="grid-3">
       <!-- Certification Placeholder 1 -->
       <article class="card cert-card theme-cert">
-        <div class="cert-image-slot"><img src="images/Certificate-1.JPG" alt="CORS and RTK GNSS certificate"></div>
+        <div class="cert-image-slot"><img src="images/Certificate-1.JPG" alt="CORS and RTK GNSS certificate" loading="lazy"></div>
         <div class="cert-content">
           <h3>Continuously Operating Reference Stations (CORS) and Real Time Kinematic (RTK) Global Navigation Satellite Systems (GNSS) Training Workshop</h3>
           <span class="eyebrow">MEASUREMENT SYSTEMS LIMITED</span>
@@ -281,7 +288,7 @@
       </article>
       <!-- Certification Placeholder 2 -->
       <article class="card cert-card theme-cert">
-        <div class="cert-image-slot"><img src="images/Certificate-2.JPG" alt="Machine Learning Foundations: Statistics"></div>
+        <div class="cert-image-slot"><img src="images/Certificate-2.JPG" alt="Machine Learning Foundations: Statistics certificate" loading="lazy"></div>
         <div class="cert-content">
           <h3>Machine Learning Foundations: Statistics</h3>
           <span class="eyebrow">linkedin eLearning</span>
@@ -290,13 +297,24 @@
       </article>
       <!-- Certification Placeholder 3 -->
       <article class="card cert-card theme-cert">
-        <div class="cert-image-slot"><img src="images/Certificate-3.JPG" alt="Cisco Certified Network Associate Cyber Ops (CCNA)"></div>
+        <div class="cert-image-slot"><img src="images/Certificate-3.JPG" alt="Cisco CCNA Cyber Ops certificate" loading="lazy"></div>
         <div class="cert-content">
           <h3>Cisco Certified Network Associate Cyber Ops (CCNA)</h3>
           <span class="eyebrow">Cisco Networking Academy</span>
           <span class="cert-meta">Issued: June 2024</span>
         </div>
       </article>
+
+      <!-- Certificate 4: tell me its title, then remove these comment marks and edit the text
+      <article class="card cert-card theme-cert">
+        <div class="cert-image-slot"><img src="images/Certificate-4.JPG" alt="Certificate 4" loading="lazy"></div>
+        <div class="cert-content">
+          <h3>CERTIFICATE TITLE</h3>
+          <span class="eyebrow">ISSUER</span>
+          <span class="cert-meta">Issued: MONTH YEAR</span>
+        </div>
+      </article>
+      -->
     </div>
   </div>
 </section>
